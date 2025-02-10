@@ -1,0 +1,196 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="app">
+    <button @@click="modalCrear=true" type="button" class="btn btn-primary">Crear</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Puesto</th>
+                <th scope="col">DPI</th>
+                <th scope="col">Fecha Nac</th>
+                <th scope="col">Fecha Registro</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="empleado in empleados" :key="empleado.idEmpleado">
+                <td>{{ empleado.idEmpleado }}</td>
+                <td>{{ empleado.nombre }}</td>
+                <td>{{ empleado.apellido }}</td>
+                <td>{{ empleado.direccion }}</td>
+                <td>{{ empleado.telefono }}</td>
+                <td>{{ empleado.idPuesto }}</td>
+                <td>{{ empleado.dpi}}</td>
+                <td>{{ empleado.fechaNacimiento}}</td>
+                <td>{{ empleado.fechaIngresoRegistro}}</td>
+                <td>
+                    <button @@click="modalEditar=true; selectEmpleado(empleado)" type="button" class="btn btn-warning">Editar</button>
+                    |
+                    <button @@click="modalEliminar=true; selectEmpleado(empleado)" type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    @* MODAL CREAR NUEVO EMPLEADO *@
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.558);" v-if="modalCrear">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrar empleado</h1>
+                    <button @@click="modalCrear=false" type="button" class="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Ingrese su dirección">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Ingrese su número de teléfono">
+                    </div>
+                    <div class="mb-3">
+                        <label for="idPuesto" class="form-label">Puesto</label>
+                        <input type="text" class="form-control" name="idPuesto" id="idPuesto" placeholder="Ingrese su número de puesto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dpi" class="form-label">DPI</label>
+                        <input type="text" class="form-control" name="dpi" id="dpi" placeholder="Ingrese su número de DPI">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="text" class="form-control" name="fechaNacimiento" id="fechaNacimiento" placeholder="Ingrese su fecha de nacimiento">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaIngresoRegistro" class="form-label">Fecha de Registro</label>
+                        <input type="text" class="form-control" name="fechaIngresoRegistro" id="fechaIngresoRegistro" placeholder="Ingrese su fecha de registro">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button @@click="modalCrear=false" type="button" class="btn btn-secondary">Cancelar</button>
+                    <button @@click="modalCrear=false; insertEmpleado()" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* MODAL EDITAR EMPLEADO *@
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.558);" v-if="modalEditar">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modificar empleado</h1>
+                    <button @@click="modalEditar=false" type="button" class="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" v-model="empleadoActual.nombre" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" v-model="empleadoActual.apellido" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" name="direccion" id="direccion" v-model="empleadoActual.direccion" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" name="telefono" id="telefono" v-model="empleadoActual.telefono" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="idPuesto" class="form-label">Puesto</label>
+                        <input type="text" class="form-control" name="idPuesto" id="idPuesto" v-model="empleadoActual.idPuesto" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="dpi" class="form-label">DPI</label>
+                        <input type="text" class="form-control" name="dpi" id="dpi" v-model="empleadoActual.dpi" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="text" class="form-control" name="fechaNacimiento" id="fechaNacimiento" v-model="empleadoActual.fechaNacimiento" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaIngresoRegistro" class="form-label">Fecha de Registro</label>
+                        <input type="text" class="form-control" name="fechaIngresoRegistro" id="fechaIngresoRegistro" v-model="empleadoActual.fechaIngresoRegistro" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button @@click="modalEditar=false" type="button" class="btn btn-secondary">Cancelar</button>
+                    <button @@click="modalEditar=false; updateEmpleado()" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* MODAL EDITAR EMPLEADO *@
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.558);" v-if="modalEliminar">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Está seguro de eliminar el siguiente empleado?</h1>
+                    <button @@click="modalEliminar=false" type="button" class="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" v-model="empleadoActual.nombre" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" v-model="empleadoActual.apellido" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" name="direccion" id="direccion" v-model="empleadoActual.direccion" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" name="telefono" id="telefono" v-model="empleadoActual.telefono" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="idPuesto" class="form-label">Puesto</label>
+                        <input type="text" class="form-control" name="idPuesto" id="idPuesto" v-model="empleadoActual.idPuesto" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="dpi" class="form-label">DPI</label>
+                        <input type="text" class="form-control" name="dpi" id="dpi" v-model="empleadoActual.dpi" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="text" class="form-control" name="fechaNacimiento" id="fechaNacimiento" v-model="empleadoActual.fechaNacimiento" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaIngresoRegistro" class="form-label">Fecha de Registro</label>
+                        <input type="text" class="form-control" name="fechaIngresoRegistro" id="fechaIngresoRegistro" v-model="empleadoActual.fechaIngresoRegistro" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button @@click="modalEliminar=false" type="button" class="btn btn-secondary">Cancelar</button>
+                    <button @@click="modalEliminar=false; eliminarEmpleado()" type="button" class="btn btn-primary">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/app.js"></script>
+}
