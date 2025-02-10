@@ -51,7 +51,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre" maxlength="50" />
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre" maxlength="50" required />
                     </div>
                     <div class="mb-3">
                         <label for="apellido" class="form-label">Apellido</label>
@@ -67,7 +67,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="idPuesto" class="form-label">Puesto</label>
-                        <input type="text" class="form-control" name="idPuesto" id="idPuesto" placeholder="Ingrese su número de puesto">
+                        @*<input type="text" class="form-control" name="idPuesto" id="idPuesto" placeholder="Ingrese su número de puesto">*@
+                        <select id="idPuesto" class="form-select" v-model="selectedPuesto">
+                            <option v-for="puesto in puestos" v-bind:value="puesto.idPuesto">
+                                {{ puesto.puesto }}
+                            </option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="dpi" class="form-label">DPI</label>
@@ -117,7 +122,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="idPuesto" class="form-label">Puesto</label>
-                        <input type="text" class="form-control" name="idPuesto" id="idPuesto" v-model="empleadoActual.idPuesto" />
+                        @*<input type="text" class="form-control" name="idPuesto" id="idPuesto" v-model="empleadoActual.idPuesto" />*@
+                        <select id="idPuesto" class="form-select" v-model="selectedPuesto">
+                            <option v-for="puesto in puestos" v-bind:value="puesto.idPuesto">
+                                {{ puesto.puesto }}
+                            </option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="dpi" class="form-label">DPI</label>
@@ -167,7 +177,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="idPuesto" class="form-label">Puesto</label>
-                        <input type="text" class="form-control" name="idPuesto" id="idPuesto" v-model="empleadoActual.idPuesto" disabled />
+                        @*<input type="text" class="form-control" name="idPuesto" id="idPuesto" v-model="empleadoActual.idPuesto" disabled />*@
+                        <select id="idPuesto" class="form-select" v-model="selectedPuesto" disabled>
+                            <option v-for="puesto in puestos" v-bind:value="puesto.idPuesto">
+                                {{ puesto.puesto }}
+                            </option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="dpi" class="form-label">DPI</label>

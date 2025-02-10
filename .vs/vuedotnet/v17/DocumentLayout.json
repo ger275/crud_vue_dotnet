@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|c:\\users\\windows 10\\desktop\\practicas_c_sharp\\vuedotnet\\models\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|solutionrelative:models\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|c:\\users\\windows 10\\desktop\\practicas_c_sharp\\vuedotnet\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|solutionrelative:controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|c:\\users\\windows 10\\desktop\\practicas_c_sharp\\vuedotnet\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|solutionrelative:wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|c:\\users\\windows 10\\desktop\\practicas_c_sharp\\vuedotnet\\models\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|solutionrelative:models\\empleadomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|c:\\users\\windows 10\\desktop\\practicas_c_sharp\\vuedotnet\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|c:\\users\\windows 10\\desktop\\practicas_c_sharp\\vuedotnet\\controllers\\puestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|solutionrelative:controllers\\puestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|c:\\users\\windows 10\\desktop\\practicas_c_sharp\\vuedotnet\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5806B742-D4CF-45EE-A38C-8B0055A8F511}|vuedotnet.csproj|solutionrelative:controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,30 +34,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\practicas_c_sharp\\vuedotnet\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\practicas_c_sharp\\vuedotnet\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC8AAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-10T04:00:33.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EmpleadoModel.cs",
               "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\practicas_c_sharp\\vuedotnet\\Models\\EmpleadoModel.cs",
               "RelativeDocumentMoniker": "Models\\EmpleadoModel.cs",
               "ToolTip": "C:\\Users\\Windows 10\\Desktop\\practicas_c_sharp\\vuedotnet\\Models\\EmpleadoModel.cs",
               "RelativeToolTip": "Models\\EmpleadoModel.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBoAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T03:02:00.672Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "app.js",
               "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\practicas_c_sharp\\vuedotnet\\wwwroot\\js\\app.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\app.js",
               "ToolTip": "C:\\Users\\Windows 10\\Desktop\\practicas_c_sharp\\vuedotnet\\wwwroot\\js\\app.js",
               "RelativeToolTip": "wwwroot\\js\\app.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAGAAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAqwEsAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-02-09T23:43:34.03Z",
               "EditorCaption": ""
@@ -66,7 +83,7 @@
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Windows 10\\Desktop\\practicas_c_sharp\\vuedotnet\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAAwL0AAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-09T22:58:01.812Z",
               "EditorCaption": ""
@@ -81,11 +98,12 @@
               "RelativeToolTip": "Controllers\\PuestoController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T23:19:01.518Z"
+              "WhenOpened": "2025-02-09T23:19:01.518Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "EmpleadoController.cs",
               "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\practicas_c_sharp\\vuedotnet\\Controllers\\EmpleadoController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmpleadoController.cs",
@@ -93,8 +111,7 @@
               "RelativeToolTip": "Controllers\\EmpleadoController.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAIwEMAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T15:43:27.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-09T15:43:27.886Z"
             }
           ]
         }

@@ -1,22 +1,35 @@
 ﻿const apiEmpleado = "http://localhost:5201/api/Empleado";
+const apiPuesto = "http://localhost:5201/api/Puesto";
 
 const app = Vue.createApp({
     data() {
         return {
             empleados: [],
+            puestos: [],
             modalCrear: false,
             modalEditar: false,
             modalEliminar: false,
-            empleadoActual: {}
+            empleadoActual: {},
+            selectedPuesto: ""
         }
+    },
+    component() {
+        'vue-select',
+        VueSelect.VueSelect
     },
     mounted() {
         this.getEmpleados()
+        this.getPuestos()
     },
     methods: {
         getEmpleados() {
             axios.get(apiEmpleado).then(function (response) {
                 app.empleados = response.data;
+            });
+        },
+        getPuestos() {
+            axios.get(apiPuesto).then(function (response) {
+                app.puestos = response.data;
             });
         },
         insertEmpleado() {
@@ -60,6 +73,7 @@ const app = Vue.createApp({
                 }
             ).then(function (response) {
                 app.empleadoActual = {}
+                app.selectedPuesto = ""
                 app.getEmpleados()
             })
         },
@@ -72,11 +86,13 @@ const app = Vue.createApp({
                 }
             ).then(function (response) {
                 app.empleadoActual = {}
+                app.selectedPuesto = ""
                 app.getEmpleados()
             })
         },
         selectEmpleado(empleado) {
             app.empleadoActual = empleado
+            app.selectedPuesto = empleado.idPuesto
         }
     }
 }).mount('#app')
