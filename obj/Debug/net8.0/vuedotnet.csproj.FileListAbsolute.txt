@@ -102,3 +102,4 @@ C:\Users\Windows 10\Desktop\practicas_c_sharp\vuedotnet\obj\Debug\net8.0\refint\
 C:\Users\Windows 10\Desktop\practicas_c_sharp\vuedotnet\obj\Debug\net8.0\vuedotnet.pdb
 C:\Users\Windows 10\Desktop\practicas_c_sharp\vuedotnet\obj\Debug\net8.0\vuedotnet.genruntimeconfig.cache
 C:\Users\Windows 10\Desktop\practicas_c_sharp\vuedotnet\obj\Debug\net8.0\ref\vuedotnet.dll
+C:\Users\Windows 10\Desktop\practicas_c_sharp\vuedotnet\obj\Debug\net8.0\vuedotnet.sourcelink.json
