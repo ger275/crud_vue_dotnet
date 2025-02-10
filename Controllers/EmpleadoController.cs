@@ -20,7 +20,7 @@ namespace vuedotnet.Controllers
         [HttpGet]
         public async Task<ActionResult<List<EmpleadoModel>>> GetEmpleados()
         {
-            var lista = await _context.empleado.ToListAsync();
+            var lista = await _context.empleado_puesto.ToListAsync();
             return Ok(lista);
         }
 

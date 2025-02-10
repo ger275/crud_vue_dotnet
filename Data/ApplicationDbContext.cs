@@ -18,5 +18,7 @@ namespace vuedotnet.Data
         public DbSet<EmpleadoModel> empleado { get; set; }
 
         public DbSet<PuestoModel> puesto { get; set; }
+
+        public DbSet<EmpleadoPuestoModel> empleado_puesto { get; set; }
     }
 }

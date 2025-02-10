@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vuedotnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b3346e37cb7a89256c509bd4d77bce6eba2e019")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b836c644f0a7ba88a7dbeda40bd4af14108a7cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("vuedotnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vuedotnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

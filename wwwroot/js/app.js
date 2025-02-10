@@ -13,10 +13,6 @@ const app = Vue.createApp({
             selectedPuesto: ""
         }
     },
-    component() {
-        'vue-select',
-        VueSelect.VueSelect
-    },
     mounted() {
         this.getEmpleados()
         this.getPuestos()
